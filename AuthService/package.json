@@ -1,0 +1,22 @@
+{
+  "name": "auth_ms",
+  "version": "0.0.1",
+  "description": "Micro Service de Autenticação",
+  "main": "./srv/server.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Rômulo Torres",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "bcryptjs": "^2.4.3",
+    "grpc": "^1.24.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "rootpath": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

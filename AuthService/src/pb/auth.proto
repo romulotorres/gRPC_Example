@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+message User {
+  string _id = 1;
+  string name = 2;
+  string email = 3;
+  string password = 4;
+}
+
+message UserWithoutPassword {
+  string _id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message Users {
+  repeated UserWithoutPassword list = 1;
+  int32 count = 2; 
+}
+
+message GetByIdRequest {
+  string id = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  UserWithoutPassword user = 1;
+  string token = 2;
+}
+
+message ValidateRequest {
+  string token = 1;
+}
+
+message UserResponse {
+  UserWithoutPassword user = 1;
+  string error = 2;
+}
+
+
+service AuthService {
+  rpc get(GetByIdRequest) returns (UserWithoutPassword);
+  rpc list(UserWithoutPassword) returns (Users);
+  rpc store(User) returns (UserWithoutPassword);
+  rpc authenticate(LoginRequest) returns (LoginResponse);
+  rpc validate(ValidateRequest) returns (UserWithoutPassword);
+}

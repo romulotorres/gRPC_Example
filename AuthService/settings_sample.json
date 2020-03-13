@@ -1,0 +1,7 @@
+{
+  "LOCAL_URL": "0.0.0.0",
+  "LOCAL_PORT": "3334",
+  "CONNECTION_STRING": "[Your connection string]",
+  "JWT_SECRET": "My JWT Key",
+  "JWT_EXPIRATION_TIME": "7d"
+}
