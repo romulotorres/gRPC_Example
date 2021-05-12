@@ -11,7 +11,7 @@
   "dependencies": {
     "@grpc/proto-loader": "^0.5.3",
     "bcryptjs": "^2.4.3",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.3",
     "rootpath": "^0.1.2"
